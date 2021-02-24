@@ -4,7 +4,7 @@ import com.androiddevs.mvvmnewsapp.api.RetrofitInstance
 import com.androiddevs.mvvmnewsapp.api.responses.Article
 import com.androiddevs.mvvmnewsapp.db.ArticleDatabase
 
-class NewRepository(
+class NewsRepository(
     val db:ArticleDatabase
 ) {
 

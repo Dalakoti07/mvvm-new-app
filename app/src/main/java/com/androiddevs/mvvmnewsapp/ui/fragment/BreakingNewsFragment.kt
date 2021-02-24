@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
@@ -48,6 +49,7 @@ class BreakingNewsFragment :Fragment(R.layout.fragment_breaking_news) {
                     Log.d(TAG,"data fetched error")
                     paginationProgressBar.visibility=View.INVISIBLE
                     response.message?.let {
+                        Toast.makeText(context,"Error occured $it",Toast.LENGTH_SHORT).show()
                         Log.e(TAG," an error occurred ${it}")
                     }
                 }
